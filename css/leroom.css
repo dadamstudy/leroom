@@ -6,6 +6,9 @@
 html {
     scroll-behavior: smooth;
 }
+html::-webkit-scrollbar {
+    display:none;
+}
 html, body {
     font:13pt/160% "Gowun Dodum", sans-serif;
 }
@@ -181,10 +184,11 @@ main h1:hover:not(#index main h1) {
     box-shadow:0 10px 5px #555;
 }
 
-
-
-
-
+/***** myroom.html *****/
+#myroom main {
+    margin-top:90px;
+    margin-bottom: 100px;
+}
 
 /* ****checklist.html**** */
 #checklist main {
@@ -304,9 +308,23 @@ main+#addpopup div {
     color:#ddd;
 }
 
+
+/* ****calendar.html**** */
+#calendarview #layout {
+    margin-top:100px;
+    margin-bottom: 500px;
+}
+#calendarview div h3 {
+    width:fit-content; margin:auto;
+    margin-bottom: 20px;
+}
+
 /****** login.html ******/
 #login main {
     margin-top:160px;
+}
+#login main h1 a:hover {
+    text-decoration: underline; font-weight: bold;
 }
 #login form {
     border-bottom: 1px solid rgba(58, 160, 255, 0.76);
@@ -333,20 +351,14 @@ main+#addpopup div {
 #login main #sign {
     display:flex; width:80%; margin:auto;
 }
-#login a {
+#login a:not(h1 a) {
     display: block; max-width:250px; margin:auto;
     margin-top:20px;
 }
 
 
-/* ****calendar.html**** */
-#calendar #layout {
-    margin-top:200px;
-}
 
 
-
-/* 로그인, 회원가입 화면 */
 
 /* 하단공통 */
 footer {
